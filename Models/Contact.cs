@@ -26,19 +26,5 @@ namespace AdressBook.Models
         [DataType(DataType.PhoneNumber)]
         public List<string> TelephoneNumbers { get; set; }
       
-
-        //public Contact(GetContactResponseDto dto)
-        //{
-        //    Name = dto.Name;
-        //    Address = dto.Address;
-
-        //    if (dto.TelephoneNumbers.Any())
-        //    {
-        //        foreach (var telephoneNumber in dto.TelephoneNumbers)
-        //        {
-        //            TelephoneNumbers.Add(telephoneNumber);
-        //        }
-        //    }
-        //}
     }
 }

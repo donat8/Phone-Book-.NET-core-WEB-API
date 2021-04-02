@@ -31,18 +31,11 @@ namespace AdressBook.Repositories
             await _context.SaveChangesAsync();
         }
 
-   
-
-        //public async Task<IEnumerable<Contact>> Get()
-        //{
-        //    return await _context.Contacts.ToListAsync();
-        //}
-
         public async Task<Contact> Get(int id)
         {
             return await _context.Contacts.FindAsync(id);
         }
-        //?????????????????
+    
         public async Task<PagedList<Contact>> Get(UrlQueryParameters urlQueryParameters)
         {
             var source= _context.Contacts.AsQueryable();

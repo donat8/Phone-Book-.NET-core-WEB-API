@@ -12,8 +12,7 @@ namespace AdressBook.Hubs
         {
             await Clients.All.SendAsync("BroadcastMessage", user, message);
         }
-
-      
+     
     }
 }
 

@@ -27,6 +27,7 @@ namespace AdressBook.Controllers
             _signalrHub = signalrHub;
         }
 
+        //GET ALL + PAGING
         [HttpGet]
         public async Task<IActionResult> GetContacts(
             [FromQuery] Models.UrlQueryParameters urlQueryParameters)
@@ -45,6 +46,7 @@ namespace AdressBook.Controllers
             return Ok(contacts);
         }
 
+        //GET BY ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetContact(int id)
         {
@@ -93,6 +95,7 @@ namespace AdressBook.Controllers
             return Ok(contact);
         }
 
+        //DELETE
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -105,13 +108,5 @@ namespace AdressBook.Controllers
             return Ok("Contact is deleted");
         }
 
-        //public BadRequestObjectResult CheckNameAndAddress(Contact contact)
-        //{
-        //    if ( _repository.FindAddress(contact.Address) != null)
-        //        return BadRequest("This address already exists!");
-        //    if ( _repository.FindName(contact.Name) != null)
-        //        return BadRequest("This name already exists!");
-        //    return null;
-        //}
     }
 }
